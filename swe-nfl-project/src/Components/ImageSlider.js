@@ -12,6 +12,7 @@ import O_Passing from './WebScraper/team_Stats/O_Passing.json';
 import O_Rushing from './WebScraper/team_Stats/O_Rushing.json';
 import O_Scoring from './WebScraper/team_Stats/O_Scoring.json';
 import O_Receiving from './WebScraper/team_Stats/O_Receiving.json';
+import Team_Info from './WebScraper/team_Stats/Team_Info.json';
 
 
 const ImageSlider = ({slides}) => {
@@ -59,59 +60,66 @@ const ImageSlider = ({slides}) => {
             
             
             <FaArrowAltCircleDown className='down-arrow' onClick={nextSlide}/>
+
+            <div class='text'>Location:</div>
+            <td class="locationArea">{Team_Info[current].location.city}</td>
+            <div class='text'>Team:</div>
+            <td class="locationArea">{Team_Info[current].location.team}</td>
+            <div class='text'>Stadium:</div>
+            <td class="locationArea">{Team_Info[current].location.stadium}</td>
             
             <div class='text'>Stats:</div>
             <table class="statsTable">
             
             <th>Offense:</th>
             <tr>
-                <td class="statsCategory" id = "passYards">Pass Yards</td>
+                <td class="statsCategory"><span class="passyards">Pass Yards</span></td>
                 <td class="statsCategory">{O_Passing[current].stats.PassYds}</td>
             </tr>
             <tr>
-                <td class="statsCategory">Rush Yards</td>
+                <td class="statsCategory"><span class="rushyards">Rush Yards</span></td>
                 <td class="statsCategory">{O_Rushing[current].stats.RushYds}</td>
             </tr>
             <tr>
-                <td class="statsCategory">Pass TD</td>
+                <td class="statsCategory"><span class="passtd">Pass TD</span></td>
                 <td class="statsCategory">{O_Passing[current].stats.TD}</td>
             </tr>
             <tr>
-                <td class="statsCategory">Rush TD</td>
+                <td class="statsCategory"><span class="rushtd">Rush TD</span></td>
                 <td class="statsCategory">{O_Rushing[current].stats.TD}</td>
             </tr>
             <tr>
-                <td class="statsCategory">Pass Completion %</td>
+                <td class="statsCategory"><span class="passcomppct">Pass Completion %</span></td>
                 <td class="statsCategory">{O_Passing[current].stats["Cmp%"]}</td>
             </tr>
             <tr>
-                <td class="statsCategory">INT Thrown</td>
+                <td class="statsCategory"><span class="INT">INT Thrown</span></td>
                 <td class="statsCategory">{O_Passing[current].stats.INT}</td>
             </tr> 
 
             <th>Defense:</th>
             <tr>
-                <td class="statsCategory"><span class="pYardsA">Pass Yards Against</span></td>
+                <td class="statsCategory"><span class="passydall">Pass Yards Allowed</span></td>
                 <td class="statsCategory">{D_Passing[current].stats.Yds}</td>
             </tr>
             <tr>
-                <td class="statsCategory">Rush Yards Against</td>
+                <td class="statsCategory"><span class="rushydall">Rush Yards Allowed</span></td>
                 <td class="statsCategory">{D_Rushing[current].stats.RushYds}</td>
             </tr>
             <tr>
-                <td class="statsCategory">Pass TD Allowed</td>
+                <td class="statsCategory"><span class="passtdall">Pass TD Allowed</span></td>
                 <td class="statsCategory">{D_Passing[current].stats.TD}</td>
             </tr>
             <tr>
-                <td class="statsCategory">Rush TD Allowed</td>
+                <td class="statsCategory"><span class="rushtdall">Rush TD Allowed</span></td>
                 <td class="statsCategory">{D_Rushing[current].stats.TD}</td>
             </tr>
             <tr>
-                <td class="statsCategory">Defensive Int</td>
+                <td class="statsCategory"><span class="defenseINT">Defense INT</span></td>
                 <td class="statsCategory">{D_Passing[current].stats.INT}</td>
             </tr>
             <tr>
-                <td class="statsCategory">Fumbles Caused</td>
+                <td class="statsCategory"><span class="fumblescaus">Fumbles Caused</span></td>
                 <td class="statsCategory">{D_Fumbles[current].stats.FF}</td>
             </tr> 
             </table>

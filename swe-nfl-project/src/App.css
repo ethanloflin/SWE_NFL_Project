@@ -80,6 +80,7 @@
 
 
 .centerBox{
+  border-radius: 10px;
   margin-top: 400px;
   max-width: 90vh;
   position: relative;
@@ -264,11 +265,12 @@
 .statsTable{
   border: 5px double rgb(0, 15, 62);
   margin-top: 10px;
+  border-radius: 10px;
 
 }
 .statsCategory{
   border: 1px solid rgb(0,15, 62);
-
+  margin: 5px;
 }
 
 
@@ -284,9 +286,511 @@
 
 .text{
   margin-top: 5px;
+  font-weight: bold;
+}
+
+.passyards{
+  position: relative;
+  padding: 5px 12px;
+  margin: 5px;
+}
+
+.passyards:before, .passyards:after{
+  position: absolute;
+  content: '';
+  transition: all 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.passyards:before{
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color:#ffffff transparent transparent transparent;
+  top: -15px;
+  transform: translateY(20px)
+}
+
+.passyards:after{
+  content: 'Any yard that is registered through the act of the ball being caught';
+  background: #ffffff;
+  width: 500px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 300;
+  top: -75px;
+  left: -10px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px; 
+  transform: translateY(20px);
+}
+
+.passyards:hover:before, .passyards:hover:after{
+  transform: translateY(-2px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.rushyards{
+  position: relative;
+}
+
+.rushyards:before, .rushyards:after{
+  position: absolute;
+  content: '';
+  transition: all 0.0s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.rushyards:before{
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color:#ffffff transparent transparent transparent;
+  top: -15px;
+  transform: translateY(20px)
+}
+
+.rushyards:after{
+  content: 'The number of yards a player runs with the ball in their hands without receiving a pass';
+  background: #ffffff;
+  width: 500px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 300;
+  top: -75px;
+  left: -10px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px; 
+  transform: translateY(20px);
+  z-index: 10;
+}
+
+.rushyards:hover:before, .rushyards:hover:after{
+  transform: translateY(-2px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.passtd{
+  position: relative;
+}
+
+.passtd:before, .passtd:after{
+  position: absolute;
+  content: '';
+  transition: all 0.0s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.passtd:before{
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color:#ffffff transparent transparent transparent;
+  top: 5px;
+  transform: translateY(20px)
+}
+
+.passtd:after{
+  content: 'A pass thrown from the passer (usually the quarterback) to a receiver that results in a touchdown being scored';
+  background: #ffffff;
+  width: 500px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 300;
+  top: -75px;
+  left: -10px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px; 
+  transform: translateY(20px);
+  z-index: 10;
+}
+
+.passtd:hover:before, .passtd:hover:after{
+  transform: translateY(-2px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.rushtd{
+  position: relative;
+}
+
+.rushtd:before, .rushtd:after{
+  position: absolute;
+  content: '';
+  transition: all 0.0s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.rushtd:before{
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color:#ffffff transparent transparent transparent;
+  top: -15px;
+  transform: translateY(20px)
+}
+
+.rushtd:after{
+  content: 'A touchdown scored by a player with the ball in their posession without receiving a pass';
+  background: #ffffff;
+  width: 500px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 300;
+  top: -75px;
+  left: -10px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px; 
+  transform: translateY(20px);
+  z-index: 10;
+}
+
+.rushtd:hover:before, .rushtd:hover:after{
+  transform: translateY(-2px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.passcomppct{
+  position: relative;
+}
+
+.passcomppct:before, .passcomppct:after{
+  position: absolute;
+  content: '';
+  transition: all 0.0s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.passcomppct:before{
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color:#ffffff transparent transparent transparent;
+  top: -15px;
+  transform: translateY(20px)
+}
+
+.passcomppct:after{
+  content: 'The percentage of passes completed from the number of passes attempted';
+  background: #ffffff;
+  width: 500px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 300;
+  top: -75px;
+  left: -10px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px; 
+  transform: translateY(20px);
+  z-index: 10;
+}
+
+.passcomppct:hover:before, .passcomppct:hover:after{
+  transform: translateY(-2px);
+  opacity: 1;
+  visibility: visible;
 }
 
 
-#passYards:hover{
-  
+.INT{
+  position: relative;
+}
+
+.INT:before, .INT:after{
+  position: absolute;
+  content: '';
+  transition: all 0.0s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.INT:before{
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color:#ffffff transparent transparent transparent;
+  top: 5px;
+  transform: translateY(20px)
+}
+
+.INT:after{
+  content: 'The number of passes in which the ball was intended for a player of the same team but caught by a player of the team on defense';
+  background: #ffffff;
+  width: 500px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 300;
+  top: -75px;
+  left: -10px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px; 
+  transform: translateY(20px);
+  z-index: 10;
+}
+
+.INT:hover:before, .INT:hover:after{
+  transform: translateY(-2px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.passydall{
+  position: relative;
+}
+
+.passydall:before, .passydall:after{
+  position: absolute;
+  content: '';
+  transition: all 0.0s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.passydall:before{
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color:#ffffff transparent transparent transparent;
+  top: -5px;
+  transform: translateY(20px)
+}
+
+.passydall:after{
+  content: 'The amount of yards gained by an offensive team on completed passes allowed by a defense';
+  background: #ffffff;
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  top: -75px;
+  left: -10px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px; 
+  transform: translateY(20px);
+  z-index: 10;
+}
+
+.passydall:hover:before, .passydall:hover:after{
+  transform: translateY(-2px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.rushydall{
+  position: relative;
+}
+
+.rushydall:before, .rushydall:after{
+  position: absolute;
+  content: '';
+  transition: all 0.0s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.rushydall:before{
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color:#ffffff transparent transparent transparent;
+  top: -5px;
+  transform: translateY(20px)
+}
+
+.rushydall:after{
+  content: 'The amount of yards gained by an offensive team on rushing attempts allowed by a defense';
+  background: #ffffff;
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  top: -75px;
+  left: -10px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px; 
+  transform: translateY(20px);
+  z-index: 10;
+}
+
+.rushydall:hover:before, .rushydall:hover:after{
+  transform: translateY(-2px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.passtdall{
+  position: relative;
+}
+
+.passtdall:before, .passtdall:after{
+  position: absolute;
+  content: '';
+  transition: all 0.0s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.passtdall:before{
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color:#ffffff transparent transparent transparent;
+  top: -5px;
+  transform: translateY(20px)
+}
+
+.passtdall:after{
+  content: 'The amount of passing TDs scored by an offensive team allowed by a defense';
+  background: #ffffff;
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  top: -75px;
+  left: -10px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px; 
+  transform: translateY(20px);
+  z-index: 10;
+}
+
+.passtdall:hover:before, .passtdall:hover:after{
+  transform: translateY(-2px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.rushtdall{
+  position: relative;
+}
+
+.rushtdall:before, .rushtdall:after{
+  position: absolute;
+  content: '';
+  transition: all 0.0s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.rushtdall:before{
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color:#ffffff transparent transparent transparent;
+  top: -5px;
+  transform: translateY(20px)
+}
+
+.rushtdall:after{
+  content: 'The amount of rushing TDs scored by an offensive team allowed by a defense';
+  background: #ffffff;
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  top: -75px;
+  left: -10px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px; 
+  transform: translateY(20px);
+  z-index: 10;
+}
+
+.rushtdall:hover:before, .rushtdall:hover:after{
+  transform: translateY(-2px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.defenseINT{
+  position: relative;
+}
+
+.defenseINT:before, .defenseINT:after{
+  position: absolute;
+  content: '';
+  transition: all 0.0s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.defenseINT:before{
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color:#ffffff transparent transparent transparent;
+  top: -5px;
+  transform: translateY(20px)
+}
+
+.defenseINT:after{
+  content: 'The amount of passes caught by the defense resulting in a turnover';
+  background: #ffffff;
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  top: -75px;
+  left: -10px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px; 
+  transform: translateY(20px);
+  z-index: 10;
+}
+
+.defenseINT:hover:before, .defenseINT:hover:after{
+  transform: translateY(-2px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.fumblescaus{
+  position: relative;
+}
+
+.fumblescaus:before, .fumblescaus:after{
+  position: absolute;
+  content: '';
+  transition: all 0.0s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fumblescaus:before{
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color:#ffffff transparent transparent transparent;
+  top: -5px;
+  transform: translateY(20px)
+}
+
+.fumblescaus:after{
+  content: 'The amount of balls that are fumbled resulting in a loss of player possesion caused by a defense';
+  background: #ffffff;
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  top: -75px;
+  left: -10px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px; 
+  transform: translateY(20px);
+  z-index: 10;
+}
+
+.fumblescaus:hover:before, .fumblescaus:hover:after{
+  transform: translateY(-2px);
+  opacity: 1;
+  visibility: visible;
 }
